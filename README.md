@@ -1,8 +1,10 @@
 # WordWrapTing
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/word_wrap_ting`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+The `WordWrapTing` module provides a `wrap` function which takes two arguments: 
+a string, and a column number. The function returns the string, but with line 
+breaks inserted at just the right places to make sure that no line is longer 
+than the column number. It tries to break lines at word boundaries. Like a word 
+processor, it breaks the line by replacing the last space in a line with a newline.
 
 ## Installation
 
@@ -22,7 +24,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+WordWrapTing.wrap('word', 5)
+# word
+
+WordWrapTing.wrap('longword', 4)
+# long
+# word
+
+WordWrapTing.wrap('very long word', 4)
+# very
+# long
+# word
+```
 
 ## Development
 
