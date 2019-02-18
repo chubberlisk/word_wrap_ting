@@ -1,4 +1,6 @@
-require "word_wrap_ting/version"
+# frozen_string_literal: true
+
+require 'word_wrap_ting/version'
 
 module WordWrapTing
   class Error < StandardError; end
